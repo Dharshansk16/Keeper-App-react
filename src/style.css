@@ -35,7 +35,8 @@ footer {
 }
 
 footer p {
-  color: #ccc;
+  color: #a7a7a7;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .note {
@@ -44,5 +45,21 @@ footer p {
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
   width: 300px;
-  margin-top: 30px;
+  margin: 30px;
+  height: auto;
+}
+
+.row {
+  float: left;
+}
+
+.note p {
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #767575;
+}
+
+.note h2 {
+  font-family: "Times New Roman", Times, serif;
+  color: #8845f4;
 }

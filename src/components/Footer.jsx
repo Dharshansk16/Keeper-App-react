@@ -3,7 +3,7 @@ function Footer() {
   const currentYear = date.getFullYear();
   return (
     <footer>
-      <p>CopyRight {currentYear}</p>
+      <p>copyright &copy; {currentYear}</p>
     </footer>
   );
 }
