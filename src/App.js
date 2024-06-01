@@ -1,14 +1,27 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import cd from "./components/CardDetails";
 import "../src/style.css";
-import CreateCard from "./components/LoopCard";
+import AddCard from "./components/AddCard";
+import React from "react";
+import Notes from "./components/Notes";
 
 export default function App() {
+  const [notes, setNotes] = React.useState([]);
+
+  function addNote(note) {
+    setNotes((prevNotes) => {
+      return [...prevNotes, note];
+    });
+  }
+  function displayNotes(n, index) {
+    return <Notes key={index} title={n.title} content={n.content} />;
+  }
+
   return (
     <div className="App">
       <Header />
-      {cd.map(CreateCard)}
+      <AddCard buttonText="Add" onAdd={addNote} />
+      {notes.map(displayNotes)}
       <Footer />
     </div>
   );

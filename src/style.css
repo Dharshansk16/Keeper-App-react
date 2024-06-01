@@ -39,7 +39,7 @@ footer p {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.note {
+.card {
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
@@ -49,17 +49,66 @@ footer p {
   height: auto;
 }
 
-.row {
-  float: left;
-}
-
-.note p {
+.card p {
   padding: 5px;
   font-family: Arial, Helvetica, sans-serif;
   color: #767575;
+  margin: 4px;
 }
 
-.note h2 {
+.card h2 {
   font-family: "Times New Roman", Times, serif;
-  color: #8845f4;
+  color: #8945f4;
+  margin: 2px;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
+}
+.textArea {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: auto;
+  padding: 30px;
+  margin: 50px;
+  border-radius: 7px;
+  background-color: #fff;
+}
+.textArea input[type="text"] {
+  margin: 10px;
+  padding: 8px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid #767575;
+  background-color: transparent;
+}
+.textArea input::placeholder {
+  color: #767575;
+  opacity: 75%;
+}
+.textArea button {
+  position: absolute;
+  right: 600px;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #f5ba13;
+  font-family: cursive;
+  color: #fff;
+  font-weight: 1000;
+  border-color: #f5ba13;
+}
+
+.textArea button:hover {
+  box-shadow: rgba(203, 206, 105, 0.25) 0px 30px 60px -12px inset,
+    rgba(88, 94, 34, 0.3) 0px 18px 36px -18px inset;
+}
+
+.row {
+  float: left;
+}
+.textArea input[type="text"]:focus {
+  outline: none;
+  border-bottom: 1px solid #767575;
 }
