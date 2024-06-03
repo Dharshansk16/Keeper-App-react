@@ -1,4 +1,4 @@
-import HighlightIcon from "@material-ui/icons/Highlight";
+import HighlightIcon from "@mui/icons-material/Highlight";
 
 function Header() {
   return (
