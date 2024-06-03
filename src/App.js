@@ -13,8 +13,23 @@ export default function App() {
       return [...prevNotes, note];
     });
   }
+  function deleteNote(id) {
+    setNotes((prevNotes) => {
+      return prevNotes.filter((noteitem, index) => {
+        return id !== index;
+      });
+    });
+  }
   function displayNotes(n, index) {
-    return <Notes key={index} title={n.title} content={n.content} />;
+    return (
+      <Notes
+        id={index}
+        key={index}
+        title={n.title}
+        content={n.content}
+        onDelete={deleteNote}
+      />
+    );
   }
 
   return (

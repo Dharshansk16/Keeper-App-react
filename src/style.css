@@ -11,6 +11,7 @@ html {
 body {
   background: #eee;
   padding: 0 16px;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 header {
@@ -22,7 +23,7 @@ header {
 
 header h1 {
   color: #fff;
-  font-family: sans-serif;
+  font-family: cursive;
   font-weight: 200;
 }
 
@@ -47,6 +48,7 @@ footer p {
   width: 300px;
   margin: 30px;
   height: auto;
+  position: relative;
 }
 
 .card p {
@@ -64,23 +66,21 @@ footer p {
 
 .container {
   margin: auto;
-  width: 50%;
+  width: 41%;
 }
 .textArea {
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
   width: 500px;
   height: auto;
-  padding: 30px;
   margin: 50px;
   border-radius: 7px;
   background-color: #fff;
 }
 .textArea input[type="text"] {
-  margin: 10px;
-  padding: 8px;
+  margin: 4px;
+  padding: 4px;
   font-size: 20px;
   border: none;
-  border-bottom: 1px solid #767575;
   background-color: transparent;
 }
 .textArea input::placeholder {
@@ -90,19 +90,12 @@ footer p {
 .textArea button {
   position: absolute;
   right: 600px;
-  padding: 10px;
-  border-radius: 50px;
+  top: 235px;
   margin: 10px;
   background-color: #f5ba13;
-  font-family: cursive;
   color: #fff;
-  font-weight: 1000;
+  border-radius: 80px;
   border-color: #f5ba13;
-}
-
-.textArea button:hover {
-  box-shadow: rgba(203, 206, 105, 0.25) 0px 30px 60px -12px inset,
-    rgba(88, 94, 34, 0.3) 0px 18px 36px -18px inset;
 }
 
 .row {
@@ -110,5 +103,16 @@ footer p {
 }
 .textArea input[type="text"]:focus {
   outline: none;
-  border-bottom: 1px solid #767575;
+}
+.DeleteIcon {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+DeleteButton:hover {
+  box-shadow: rgba(203, 206, 105, 0.25) 0px 30px 60px -12px inset,
+    rgba(88, 94, 34, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 10px;
 }

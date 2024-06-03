@@ -1,4 +1,7 @@
 import React from "react";
+import AddIcon from "@mui/icons-material/Add";
+import Fab from "@mui/material/Fab";
+import { Zoom } from "@material-ui/core";
 
 function AddCard(props) {
   const [inputText, setinputText] = React.useState({
@@ -22,27 +25,45 @@ function AddCard(props) {
       content: "",
     });
   }
+  const [isExpand, setExpand] = React.useState(false);
+
+  function expand() {
+    setExpand(true);
+  }
 
   return (
     <div className="container">
-      <div className="textArea">
-        <input
-          type="text"
-          name="title"
-          value={inputText.title}
-          placeholder="Title"
-          onChange={handleChange}
-        />
+      <div
+        className="textArea"
+        style={{ padding: isExpand ? "10px 20px 50px" : "5px 20px 10px" }}
+        onClick={expand}
+      >
+        {isExpand ? (
+          <input
+            type="text"
+            name="title"
+            value={inputText.title}
+            placeholder="Title"
+            onChange={handleChange}
+          />
+        ) : null}
         <br />
         <input
           type="text"
           name="content"
           value={inputText.content}
-          placeholder="Content"
+          placeholder="Take a note..."
           onChange={handleChange}
         />
         <br />
-        <button onClick={handleClick}>{props.buttonText}</button>
+        <Zoom in={isExpand}>
+          <Fab
+            style={{ width: "40px", height: "40px", minHeight: "40px" }}
+            onClick={handleClick}
+          >
+            <AddIcon />
+          </Fab>
+        </Zoom>
       </div>
     </div>
   );
